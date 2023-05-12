@@ -8,43 +8,43 @@
 				<table class="table table-dark">
 					<tr>
 						<th>NO.</th>
-						<td>NO.</td>
+						<td><?= $detail->id_analisis ?></td>
 					</tr>
 					<tr>
 						<th>Tanggal Proses</th>
-						<td>NO.</td>
+						<td><?= $detail->tgl_proses ?></td>
 					</tr>
 					<tr>
 						<th>Unit Perproduksi</th>
-						<td>NO.</td>
+						<td><?= $detail->unit_produksi ?></td>
 					</tr>
 					<tr>
 						<th>Jam Tenaga Kerja</th>
-						<td>NO.</td>
+						<td><?= $detail->jam_tkl ?></td>
 					</tr>
 					<tr>
 						<th>Jam Kerja Mesin</th>
-						<td>NO.</td>
+						<td><?= $detail->jam_km ?></td>
 					</tr>
 					<tr>
 						<th>Total Harga Bahan Baku</th>
-						<td>NO.</td>
+						<td><?= $detail->tot_harga_bb ?></td>
 					</tr>
 					<tr>
 						<th>Upah Tenaga Kerja</th>
-						<td>NO.</td>
+						<td><?= $detail->upah_tenaga_kerja ?></td>
 					</tr>
 					<tr>
 						<th>Biaya Listrik</th>
-						<td>NO.</td>
+						<td><?= $detail->listrik ?></td>
 					</tr>
 					<tr>
 						<th>Biaya Mesin</th>
-						<td>NO.</td>
+						<td><?= $detail->biaya_mesin ?></td>
 					</tr>
 					<tr>
 						<th>Hasil</th>
-						<td>NO.</td>
+						<td>Rp. <?= number_format($detail->hasil)  ?></td>
 					</tr>
 				</table>
 				<a href="<?= base_url('Admin/cAnalisis') ?>" class="btn btn-warning"><i class="fas fa-backspace"></i> Kembali</a>

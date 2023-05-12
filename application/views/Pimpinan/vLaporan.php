@@ -4,7 +4,7 @@
 		<div class="col-sm-12 col-xl-12">
 			<div class="bg-secondary rounded h-100 p-4">
 				<h6 class="mb-4"><i class="fas fa-chart-line"></i> Informasi Hasil Analisis</h6>
-				<a href="<?= base_url('Admin/cAnalisis/create') ?>" class="btn btn-warning rounded-pill mb-3"><i class="fas fa-user-plus"></i> Tambah Analisis</a>
+				<button onclick="window.print()" class="btn btn-info rounded-pill mb-3"><i class="fas fa-print"></i> Print</button>
 				<?php
 				if ($this->session->userdata('success')) {
 				?>
@@ -21,20 +21,25 @@
 							<th scope="col">#</th>
 							<th scope="col">Tanggal Proses</th>
 							<th scope="col">Hasil</th>
-							<th scope="col">Action</th>
+							<th scope="col">&nbsp;</th>
 						</tr>
 					</thead>
 					<tbody>
 						<?php
 						$no = 1;
-						foreach ($analisis as $key => $value) {
+						foreach ($laporan as $key => $value) {
 						?>
 							<tr>
 								<th scope="row"><?= $no++ ?></th>
 								<td><?= $value->tgl_proses ?></td>
-								<td>Rp. <?= number_format($value->hasil)  ?></td>
-								<td> <a href="<?= base_url('Admin/cAnalisis/detail_hasil/' . $value->id_analisis) ?>" class="btn btn-square btn-info m-2"><i class="fa fa-info"></i></a>
-								</td>
+								<td><strong>Rp. <?= number_format($value->hasil)  ?></strong><br>
+									Unit Produksi : <?= $value->unit_produksi ?><br>
+									Jam TKL : <?= $value->jam_tkl ?><br>
+									Jam Mesin : <?= $value->jam_km ?><br>
+									Total Bahan Baku: Rp. <?= number_format($value->tot_harga_bb) ?><br>
+									Upah TK : Rp. <?= number_format($value->upah_tenaga_kerja) ?></td>
+								<td>Listrik : <?= number_format($value->listrik) ?><br>
+									Biaya Mesin : <?= number_format($value->biaya_mesin) ?></td>
 							</tr>
 						<?php
 						}

@@ -21,29 +21,18 @@
 						<div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
 					</div>
 					<div class="ms-3">
-						<h6 class="mb-0">Jhon Doe</h6>
-						<span>Admin</span>
+						<h6 class="mb-0">H. Timu</h6>
+						<span>Pimpinan</span>
 					</div>
 				</div>
 				<div class="navbar-nav w-100">
-					<a href="<?= base_url('Admin/cDashboard') ?>" class="nav-item nav-link <?php if ($this->uri->segment(1) == 'Admin' && $this->uri->segment(2) == 'cDashboard') {
-																								echo 'active';
-																							}  ?>"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+					<a href="<?= base_url('Pimpinan/cDashboard') ?>" class="nav-item nav-link <?php if ($this->uri->segment(1) == 'Pimpinan' && $this->uri->segment(2) == 'cDashboard') {
+																									echo 'active';
+																								}  ?>"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
 
-					<a href="<?= base_url('Admin/cUser') ?>" class="nav-item nav-link <?php if ($this->uri->segment(1) == 'Admin' && $this->uri->segment(2) == 'cUser') {
-																							echo 'active';
-																						}  ?>"><i class="fa fa-users me-2"></i>User</a>
-					<a href="<?= base_url('Admin/cBahanBaku') ?>" class="nav-item nav-link <?php if ($this->uri->segment(1) == 'Admin' && $this->uri->segment(2) == 'cBahanBaku') {
+					<a href="<?= base_url('Pimpinan/cLaporan') ?>" class="nav-item nav-link <?php if ($this->uri->segment(1) == 'Pimpinan' && $this->uri->segment(2) == 'cLaporan') {
 																								echo 'active';
-																							}  ?>"><i class="fa fa-th me-2"></i>Bahan Baku</a>
-
-					<a href="<?= base_url('Admin/cHargaBB') ?>" class="nav-item nav-link <?php if ($this->uri->segment(1) == 'Admin' && $this->uri->segment(2) == 'cHargaBB') {
-																								echo 'active';
-																							}  ?>"><i class="fa fa-keyboard me-2"></i>Harga Periode</a>
-
-					<a href="<?= base_url('Admin/cAnalisis') ?>" class="nav-item nav-link <?php if ($this->uri->segment(1) == 'Admin' && $this->uri->segment(2) == 'cAnalisis') {
-																								echo 'active';
-																							}  ?>"><i class="fas fa-chart-line me-2"></i>Analisis HPP</a>
+																							}  ?>"><i class="fa fa-users me-2"></i>Laporan</a>
 					<a href="<?= base_url('cLogin/logout') ?>" class="nav-item nav-link "><i class="fas fa-sign me-2"></i>Logout</a>
 
 				</div>

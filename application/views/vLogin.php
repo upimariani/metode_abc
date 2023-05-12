@@ -53,16 +53,41 @@
 							</a>
 							<h3>Sign In</h3>
 						</div>
-						<div class="form-floating mb-3">
-							<input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-							<label for="floatingInput">Username</label>
-						</div>
-						<div class="form-floating mb-4">
-							<input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-							<label for="floatingPassword">Password</label>
-						</div>
+						<?php
+						if ($this->session->userdata('success')) {
+						?>
+							<div class="alert alert-success alert-dismissible fade show" role="alert">
+								<i class="fa fa-exclamation-circle me-2"></i><?= $this->session->userdata('success') ?>
+								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+							</div>
+						<?php
+						}
+						?>
+						<?php
+						if ($this->session->userdata('error')) {
+						?>
+							<div class="alert alert-danger alert-dismissible fade show" role="alert">
+								<i class="fa fa-exclamation-circle me-2"></i><?= $this->session->userdata('error') ?>
+								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+							</div>
+						<?php
+						}
+						?>
+						<form action="<?= base_url() ?>" method="POST">
+							<div class="form-floating mb-3">
+								<input type="text" name="username" class="form-control" id="floatingInput" placeholder="name@example.com">
+								<label for="floatingInput">Username</label>
+								<?= form_error('username', '<div id="emailHelp" class="form-text">', '</div>'); ?>
 
-						<button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
+							</div>
+							<div class="form-floating mb-4">
+								<input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+								<label for="floatingPassword">Password</label>
+								<?= form_error('password', '<div id="emailHelp" class="form-text">', '</div>'); ?>
+
+							</div>
+							<button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
+						</form>
 					</div>
 				</div>
 			</div>
