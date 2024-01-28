@@ -2,7 +2,7 @@
 :root {
     --primary: #EB1616;
     --secondary: #191C24;
-    --light: #6C7293;
+    --light: #ffffff;
     --dark: #000000;
 }
 
@@ -79,7 +79,7 @@
 .content {
     margin-left: 250px;
     min-height: 100vh;
-    background: var(--dark);
+    background: var(--light);
     transition: 0.5s;
 }
 
@@ -173,7 +173,7 @@
 
 .sidebar .navbar .dropdown-item:hover,
 .sidebar .navbar .dropdown-item.active {
-    background: var(--dark);
+    background: var(--light);
 }
 
 .content .navbar .navbar-nav .nav-link {
@@ -205,7 +205,7 @@
 
 .content .navbar .dropdown-item:hover,
 .content .navbar .dropdown-item.active {
-    background: var(--dark);
+    background: var(--light);
 }
 
 .content .navbar .dropdown-toggle::after {
@@ -284,6 +284,6 @@
 }
 
 .testimonial-carousel .owl-dot.active {
-    background: var(--dark);
+    background: var(--light);
     border-color: var(--primary);
 }

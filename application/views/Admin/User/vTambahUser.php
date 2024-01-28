@@ -12,7 +12,7 @@
 					</div>
 					<div class="mb-3">
 						<label for="exampleInputPassword1" class="form-label">No Telepon</label>
-						<input type="text" name="no_hp" class="form-control" id="exampleInputPassword1">
+						<input type="number" name="no_hp" class="form-control" id="exampleInputPassword1">
 						<?= form_error('no_hp', '<div id="emailHelp" class="form-text">', '</div>'); ?>
 					</div>
 					<div class="mb-3">

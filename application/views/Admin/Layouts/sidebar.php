@@ -1,7 +1,7 @@
 <body>
 	<div class="container-fluid position-relative d-flex p-0">
 		<!-- Spinner Start -->
-		<div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+		<div id="spinner" class="show bg-light position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
 			<div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
 				<span class="sr-only">Loading...</span>
 			</div>
@@ -11,7 +11,7 @@
 
 		<!-- Sidebar Start -->
 		<div class="sidebar pe-4 pb-3">
-			<nav class="navbar bg-secondary navbar-dark">
+			<nav class="navbar bg-secondary navbar-light">
 				<a href="index.html" class="navbar-brand mx-4 mb-3">
 					<h3 class="text-primary"><i class="fa fa-user"></i> UD. Sinar Tani</h3>
 				</a>
@@ -21,7 +21,7 @@
 						<div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
 					</div>
 					<div class="ms-3">
-						<h6 class="mb-0">Admin***</h6>
+						<h6 class="mb-0">Admin</h6>
 					</div>
 				</div>
 				<div class="navbar-nav w-100">
@@ -52,7 +52,7 @@
 		<!-- Content Start -->
 		<div class="content">
 			<!-- Navbar Start -->
-			<nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
+			<nav class="navbar navbar-expand bg-secondary navbar-light sticky-top px-4 py-0">
 				<a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
 					<h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
 				</a>
